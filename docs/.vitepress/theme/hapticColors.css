@@ -1,0 +1,16 @@
+:root{--vp-c-green:#9868bf;--vp-c-green-light:#b179df;--vp-c-green-lighter:#ca8aff;--vp-c-green-dark:#7e569f;--vp-c-green-darker:#654580;--vp-c-green-dimm-1:rgba(152,104,191,.05);--vp-c-green-dimm-2:rgba(152,104,191,.2);--vp-c-green-dimm-3:rgba(152,104,191,.5)}.VPTeamMembersItem.small .avatar[data-v-7735210d]{width:120px;height:120px}
+.vp-doc table {
+    display: inline-table;
+    cursor: default;
+    width: 100%;
+}
+
+.vp-doc tr {
+    text-align: center;
+}
+
+.vp-doc td {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
