@@ -17,6 +17,7 @@ for component in components:
     if (canCreate):
            template = f"""
            <script setup>
+           import {name_component} from '../vue/{name_component}.vue'
            import HTag from '../vue/HTag.vue'
            </script>
 

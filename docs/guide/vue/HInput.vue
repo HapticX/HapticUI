@@ -1,31 +1,34 @@
 <template>
   <div
-      class="flex cursor-text relative w-fit h-fit group"
-      @click="this.$refs.inputField.focus()"
+    class="flex cursor-text relative w-fit h-fit group"
+    @click="this.$refs.inputField.focus()"
   >
     <input
-        ref="inputField"
-        required
-        :type="inputType"
-        v-model="text"
-        @input="ev => handleInput(ev)"
-        :class="`peer outline-0 ${outlined ? 'bg-transparent border-2 border-neutral-700 group-focus-within:border-neutral-600 peer-valid:border-neutral-600 duration-300 transition-all' : 'border-0 bg-gradient-to-tl from-neutral-700 to-neutral-600'} px-8 py-1 rounded-full`"
-    >
+      ref="inputField"
+      required
+      :type="inputType"
+      v-model="text"
+      @input="(ev) => handleInput(ev)"
+      :class="`peer outline-0 ${
+        outlined
+          ? 'bg-transparent border-2 border-neutral-700 group-focus-within:border-neutral-600 peer-valid:border-neutral-600 duration-300 transition-all'
+          : 'border-0 bg-gradient-to-tl from-neutral-700 to-neutral-600'
+      } px-8 py-1 rounded-full`"
+    />
     <p v-show="required" class="text-red-500 select-none text-lg">*</p>
     <!--  Placeholder  -->
     <label
-        class="flex tracking-widest opacity-50 peer group-focus-within:opacity-100
-             items-center absolute w-full h-full top-0 left-0 px-8 py-1 text-lg
-             group-focus-within:text-sm group-focus-within:-mt-4 transition-all
-             peer-valid:-mt-4 peer-valid:text-sm peer-valid:opacity-100 select-none"
+      class="flex tracking-widest opacity-50 peer group-focus-within:opacity-100 items-center absolute w-full h-full top-0 left-0 px-8 py-1 text-lg group-focus-within:text-sm group-focus-within:-mt-4 transition-all peer-valid:-mt-4 peer-valid:text-sm peer-valid:opacity-100 select-none"
     >
       <slot />
     </label>
     <!--  Error text  -->
     <p
-        :class="`flex tracking-widest text-red-500 items-center select-none
+      :class="`flex tracking-widest text-red-500 items-center select-none
                absolute w-full h-full top-0 ${errorVisible ? '' : 'opacity-0'}
-               left-0 px-8 py-1 ${outlined ? 'mt-6' : 'mt-5'} text-sm transition-all duration-300`"
+               left-0 px-8 py-1 ${
+                 outlined ? 'mt-6' : 'mt-5'
+               } text-sm transition-all duration-300`"
     >
       {{ errorText }}
     </p>
@@ -33,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const {
   required = false,
@@ -43,12 +46,12 @@ const {
   inputType = "text",
   validationPattern = undefined,
 } = defineProps<{
-  outlined?: boolean,
-  required?: boolean,
-  minLength?: number,
-  maxLength?: number,
-  inputType?: string,
-  validationPattern?: RegExp
+  outlined?: boolean;
+  required?: boolean;
+  minLength?: number;
+  maxLength?: number;
+  inputType?: string;
+  validationPattern?: RegExp;
 }>();
 
 let errorVisible = ref(true);
@@ -87,14 +90,14 @@ function showError(error: string) {
  */
 function handleInput(_: InputEvent) {
   hideError();
-  if (props.minLength && text.value.length < props.minLength) {
-    showError(`minimum ${props.minLength} chars!`);
-  } else if (props.maxLength && text.value.length > props.maxLength) {
-    showError(`maximum ${props.maxLength} chars!`);
-  } else if (props.validationPattern && !props.validationPattern.test(text.value)) {
+  if (minLength && text.value.length < minLength) {
+    showError(`minimum ${minLength} chars!`);
+  } else if (maxLength && text.value.length > maxLength) {
+    showError(`maximum ${maxLength} chars!`);
+  } else if (validationPattern && !validationPattern.test(text.value)) {
     showError(`not valid!`);
   }
-  if (props.required && text.value.length === 0) {
+  if (required && text.value.length === 0) {
     showError(`field is required!`);
   }
 }
