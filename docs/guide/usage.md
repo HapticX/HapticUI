@@ -1,6 +1,6 @@
 # Usage
 
-## Installation
+## How to install HapticUI?
 
 First of all, you should to install package into your project, using your favorite package manager.
 
@@ -20,6 +20,47 @@ or
 pnpm add hapticUI
 ```
 
+## How to use components in my project?
+
+You just need to import UI component into your component and register ...
+
+- Using composition API:
+
+```vue
+<script setup>
+import HButton from "hapticUI"; // [!code focus]
+// ...
+</script>
+```
+
+- Or using options API:
+
+```vue
+<script>
+import HButton from "hapticUI"; // [!code focus]
+
+export default {
+  // ...
+  components: { HButton }, // [!code focus]
+  // ...
+};
+</script>
+```
+
+... and you can use it in your template, without importing extra styles or libraries!
+
+```vue
+<template>
+  <HButton flat>Hello world!</HButton>
+</template>
+```
+
+<p class="text-center">And here is result!</p>
+
+<div class="flex justify-center">
+    <HButton flat>Hello world!</HButton>
+</div>
+
 <style>
 :root {
   --vp-c-green: #9868BF;
@@ -32,3 +73,7 @@ pnpm add hapticUI
   --vp-c-green-dimm-3: rgba(152, 104, 191, 0.5);
 }
 </style>
+
+<script setup>
+import HButton from './vue/HButton.vue'
+</script>
