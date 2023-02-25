@@ -39,10 +39,11 @@ export default defineConfig({
         text: "Components",
         collapsed: false,
         items: [
+          {text: "Avatar", link: "/guide/pages/Avatar"},
           { text: "Button", link: "/guide/pages/Button" },
           { text: "Tag", link: "/guide/pages/Tag" },
           { text: "Input", link: "/guide/pages/Input" },
-          { text: "Loading", link: "/guide/pages/Loading" },
+          { text: "Select", link: "/guide/pages/Select" },
           { text: "Popup", link: "/guide/pages/Popup" },
         ],
       },

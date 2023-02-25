@@ -1,9 +1,10 @@
 
 <script setup>
+import Select from '../vue/HSelect.vue'
 import HTag from '../vue/HTag.vue'
 </script>
 
-# Component: Loading
+# Component: HSelect
 
 ::: danger
 Please, add information about this component.
@@ -11,7 +12,7 @@ Please, add information about this component.
 
 Description
 
-<HTag type="error" style="width: 150px; margin-top:10px;">Planned</HTag>
+<HTag type="warning" style="width: 150px; margin-top:10px;">In development</HTag>
 
 ## Props
 
@@ -23,12 +24,12 @@ Description
 
 ```vue
 <template>
-  <HLoading></HLoading>
+  <HSelect></HSelect>
 </template>
 ```
 
 - Result
 
 <div style="display: flex; flex-direction: column; gap: 5px;">
-    <HLoading></HLoading>
+    <HSelect></HSelect>
 </div>

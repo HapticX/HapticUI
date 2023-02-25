@@ -27,7 +27,7 @@ import HTag from '../guide/vue/HTag.vue'
 | Component                         | Status                                       |
 |-----------------------------------|----------------------------------------------|
 | Alert                             | <HTag type="error"> Planned </HTag>          |
-| Avatar                            | <HTag type="error"> Planned </HTag>          |
+| [Avatar](/guide/pages/Avatar)     | <HTag type="success"> Finished </HTag> |
 | Breadcrumb                        | <HTag type="error"> Planned </HTag>          |
 | [Button](/guide/pages/Button)     | <HTag type="warning"> In development </HTag> |
 | Card                              | <HTag type="error"> Planned </HTag>          |
@@ -40,7 +40,7 @@ import HTag from '../guide/vue/HTag.vue'
 | Images                            | <HTag type="error"> Planned </HTag>          |
 | [Input](/guide/pages/Input)       | <HTag type="warning"> In development </HTag> |
 | List                              | <HTag type="error"> Planned </HTag>          |
-| [Loading](/guide/pages/Loading)   | <HTag type="warning"> Planned </HTag>        |
+| Loading                           | <HTag type="error"> Planned </HTag>          |
 | Navbar                            | <HTag type="error"> Planned </HTag>          |
 | Notification                      | <HTag type="error"> Planned </HTag>          |
 | Number                            | <HTag type="error"> Planned </HTag>          |
@@ -51,6 +51,8 @@ import HTag from '../guide/vue/HTag.vue'
 | Select                            | <HTag type="error"> Planned </HTag>          |
 | Sidebar                           | <HTag type="error"> Planned </HTag>          |
 | Slider                            | <HTag type="error"> Planned </HTag>          |
+| [Select](/guide/pages/Select)     | <HTag type="warning"> In development </HTag> |
+| [Search](/guide/pages/Search)     | <HTag type="warning"> In development </HTag> |
 | Switch                            | <HTag type="error"> Planned </HTag>          |
 | Table                             | <HTag type="error"> Planned </HTag>          |
 | Tabs                              | <HTag type="error"> Planned </HTag>          |
@@ -58,4 +60,3 @@ import HTag from '../guide/vue/HTag.vue'
 | Textarea                          | <HTag type="error"> Planned </HTag>          |
 | Tooltip                           | <HTag type="error"> Planned </HTag>          |
 | Upload                            | <HTag type="error"> Planned </HTag>          |
-

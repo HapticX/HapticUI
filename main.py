@@ -17,7 +17,7 @@ for component in components:
     if (canCreate):
            template = f"""
            <script setup>
-           import {name_component} from '../vue/{name_component}.vue'
+           import H{name_component} from '../vue/H{name_component}.vue'
            import HTag from '../vue/HTag.vue'
            </script>
 
@@ -29,7 +29,7 @@ for component in components:
 
            Description
 
-           <HTag type="error" style="width: 150px; margin-top:10px;">Planned</HTag>
+           <HTag type="warning" style="width: 150px; margin-top:10px;">In development</HTag>
 
            ## Props
 
